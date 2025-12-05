@@ -119,9 +119,9 @@ export function RouteDetailScreen({ line, stations, onBack, onSimulate }: RouteD
         </div>
 
         {/* Line Diagram */}
-        <div className="bg-white p-4 mb-2">
-          <h2 className="text-gray-900 mb-3">Station Overview</h2>
-          <div className="overflow-x-auto pb-3">
+        <div className="bg-white p-4 mb-1">
+          <h2 className="text-gray-900 mb-2">Station Overview</h2>
+          <div className="overflow-x-auto pb-2 pt-1">
             <div className="flex gap-2 min-w-max">
               {lineStations.map((station, idx) => (
                 <div key={station.id} className="relative">
@@ -151,16 +151,12 @@ export function RouteDetailScreen({ line, stations, onBack, onSimulate }: RouteD
                     </div>
                     
                     {/* Station Name */}
-                    <div className="text-xs text-center text-gray-900 line-clamp-2 h-8">
+                    <div className="text-xs text-center text-gray-900 line-clamp-2 h-4">
                       {station.name.split('-')[0].trim()}
                     </div>
                     
                     {/* Transfer Icons */}
-                    {station.transfers.length > 1 && (
-                      <div className="text-xs text-gray-500 mt-1">
-                        +{station.transfers.length - 1}
-                      </div>
-                    )}
+                    {/* Removed transfer count display */}
                   </div>
                   
                   {/* Connecting Line */}
@@ -178,7 +174,7 @@ export function RouteDetailScreen({ line, stations, onBack, onSimulate }: RouteD
 
         {/* Prediction Overview */}
         <div className="bg-white p-4 mb-2">
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center justify-between mb-1">
             <h2 className="text-gray-900">Projected Congestion</h2>
             <div className="flex gap-1">
               {(['30min', '60min', '120min'] as const).map((tf) => (

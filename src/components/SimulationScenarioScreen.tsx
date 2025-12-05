@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowLeft, Play, Pause, RotateCcw, Share2, Save, TrendingUp, Clock } from 'lucide-react';
+import { ArrowLeft, Play, Pause, RotateCcw, Share2, Star, TrendingUp, Clock } from 'lucide-react';
 
 interface SimulationScenarioScreenProps {
   lineName: string;
@@ -88,7 +88,7 @@ export function SimulationScenarioScreen({ lineName, lineColor, onBack }: Simula
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto pb-8">
         {/* Control Panel */}
         <div className="bg-white p-4 mb-2">
           <h2 className="text-gray-900 mb-3">Controls</h2>
@@ -362,8 +362,8 @@ export function SimulationScenarioScreen({ lineName, lineColor, onBack }: Simula
         {/* Actions */}
         <div className="bg-white p-4">
           <div className="space-y-2">
-            <button className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-colors">
-              <Save className="w-5 h-5" />
+            <button className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#2979FF] text-white rounded-xl hover:bg-blue-700 transition-colors">
+              <Star className="w-5 h-5" />
               Save Scenario
             </button>
             <button className="w-full flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors">
